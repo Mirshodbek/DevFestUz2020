@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">DevFest App</string>
+    <string name="agenda">Agenda</string>
+    <string name="speakers">Speakers</string>
+    <string name="team">Team</string>
+    <string name="sponsors">Sponsors</string>
+    <string name="faq">Find Your Answer</string>
+    <string name="locate_us">Find Your Way</string>
+    <string name="all">All</string>
+    <string name="complexity">Complexity: </string>
+    <string name="language">Language:</string>
+    <string name="cloud">Cloud</string>
+    <string name="android">Android</string>
+    <string name="web">Web</string>
+    <string name="presentation">Presentation</string>
+    <string name="videoid">Video</string>
+    <string name="company">Company:</string>
+    <string name="country">Country:</string>
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="bakhromov_mirshodbek">Bakhromov Mirshodbek</string>
+    <string name="android_mobile_app_developer">Android Mobile App Developer</string>
+    <string name="date">2020-10-18</string>
+    <string name="home">Home</string>
+    <string name="shareit">ShareIt</string>
+    <string name="send_report">Send crime report via</string>
+</resources>

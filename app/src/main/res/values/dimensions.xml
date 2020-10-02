@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width">0dp</dimen>
+    <dimen name="paddingEnd">10dp</dimen>
+    <dimen name="paddingStart">5dp</dimen>
+    <dimen name="paddingTop">14dp</dimen>
+
+    <dimen name="margin">14dp</dimen>
+
+    <dimen name="map_inset_margin">100dp</dimen>
+</resources>

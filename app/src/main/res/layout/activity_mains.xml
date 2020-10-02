@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/agendaToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/toolbarMain" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/home"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorMain"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/devFestImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/devfest2020" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameAgenda"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            app:layout_constraintEnd_toStartOf="@+id/icon1"
+            app:layout_constraintHorizontal_weight="3.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/devFestImage">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintAgenda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/agenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:paddingEnd="@dimen/paddingEnd"
+                    android:src="@drawable/history"
+                    android:text="@string/agenda"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorMain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/event"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/event"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/paddingStart"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:background="@drawable/history"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon1"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameSpeaker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toEndOf="@+id/frameAgenda"
+            app:layout_constraintTop_toBottomOf="@+id/devFestImage"/>
+
+        <FrameLayout
+            android:id="@+id/frameSpeaker"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/paddingTop"
+            android:background="@drawable/shape"
+            app:layout_constraintEnd_toStartOf="@+id/icon2"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameAgenda">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintSpeaker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/speakers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:paddingEnd="@dimen/paddingEnd"
+                    android:text="@string/speakers"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorMain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/user"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/user"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:background="@drawable/user"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon2"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameTeam"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintStart_toEndOf="@+id/frameSpeaker"
+            app:layout_constraintTop_toBottomOf="@+id/frameAgenda"/>
+
+        <FrameLayout
+            android:id="@+id/frameTeam"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/paddingTop"
+            android:background="@drawable/shape"
+            app:layout_constraintEnd_toStartOf="@+id/icon3"
+            app:layout_constraintHorizontal_weight="5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameSpeaker">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintTeam"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="end">
+
+                <TextView
+                    android:id="@+id/team"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:text="@string/team"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorMain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/people"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/people"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:background="@drawable/people"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon3"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameSponsor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintStart_toEndOf="@+id/frameTeam"
+            app:layout_constraintTop_toBottomOf="@+id/frameSpeaker"/>
+
+        <FrameLayout
+            android:id="@+id/frameSponsor"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/paddingTop"
+            android:background="@drawable/shape"
+            app:layout_constraintEnd_toStartOf="@+id/icon4"
+            app:layout_constraintHorizontal_weight="6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameTeam">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintSponsor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/sponsors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:text="@string/sponsors"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorMain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/finance"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/finance"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:background="@drawable/sponsor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon4"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameFAQ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toEndOf="@+id/frameSponsor"
+            app:layout_constraintTop_toBottomOf="@+id/frameTeam"/>
+
+        <FrameLayout
+            android:id="@+id/frameFAQ"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/paddingTop"
+            android:background="@drawable/shape"
+            app:layout_constraintEnd_toStartOf="@+id/icon5"
+            app:layout_constraintHorizontal_weight="7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameSponsor">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintFAQ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/faq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:text="@string/faq"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorMain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/question"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/question"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:background="@drawable/customer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon5"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/frameLocate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toEndOf="@+id/frameFAQ"
+            app:layout_constraintTop_toBottomOf="@+id/frameSponsor"/>
+
+        <FrameLayout
+            android:id="@+id/frameLocate"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/paddingTop"
+            android:background="@drawable/shape"
+            app:layout_constraintEnd_toStartOf="@+id/icon6"
+            app:layout_constraintHorizontal_weight="8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameFAQ">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLocate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+
+                <TextView
+                    android:id="@+id/locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:layout_marginBottom="@dimen/margin"
+                    android:text="@string/locate_us"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorMain"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/map"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/map"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="@dimen/paddingEnd"
+                    android:background="@drawable/place"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon6"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/frameLocate"
+            app:layout_constraintTop_toBottomOf="@+id/frameFAQ"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

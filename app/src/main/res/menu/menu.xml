@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/allButton"
+        android:icon="@drawable/all_item"
+        android:title="@string/all"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/cloudButton"
+        android:icon="@drawable/cloud"
+        android:title="@string/cloud"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mobileButton"
+        android:icon="@drawable/android"
+        android:title="@string/android"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/webButton"
+        android:icon="@drawable/web"
+        android:title="@string/web"
+        app:showAsAction="ifRoom" />
+</menu>
