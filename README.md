@@ -1,5 +1,10 @@
 # DevFestUz2020
 
+##Hackathon
+GDG DevFest 2020 Hackathon
+
+#I have taken third place.
+
 ## Works done
 
 - User can be able view and click list of functionalities of the app, such as: Agenda, Speakers, GDG team, 
@@ -28,3 +33,5 @@ Sponsors of the event, FAQ, Location of the event in the Home.
 
 
 - Connected Firebase with my app.
+
+![devfestapp](https://user-images.githubusercontent.com/36184953/101627272-ec7e8f80-3a3f-11eb-807d-7813009cfc05.jpg)
